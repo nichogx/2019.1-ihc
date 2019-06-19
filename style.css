@@ -1,0 +1,21 @@
+#navbar-div {
+	height: 120px;
+	background-color: #555555;
+}
+
+#content-div {
+	height: 100%;
+}
+
+#content-content {
+	width: 80%;
+	padding-left: 80%;
+	padding-bottom: 100%;
+}
+
+#sidebar {
+	width: 20%;
+	padding-right: 20%;
+	padding-bottom: 100%;
+	background-color: #888888;
+}
