@@ -118,20 +118,32 @@
 					<h1 class="h2">Corrigir meus dados</h1>
 				</div>
 				<div class="container">
-					<p style="font-size: 1.2rem;">Você solicitou a correção dos dados abaixo. Confime a correção para efetuar a mudança por definitivo.</p>
-                        <ul style="font-size: 1.2rem">
-                            <li>Nome</li>
-                            <li>CPF</li>
-                            <li>Endereço</li>
-                            <li>Email</li>
-                            <li>Telefone Celular</li>
-                        </ul>
-                        <form action="finalfinal_corrigir.html">
-							<p style ="font-size: 1.2rem;"><input type="checkbox"> Confirmo a correção dos meus dados.</p>
-							<input type="submit" value="Confirmar">
-						</form>
+					<p style="font-size: 1.2rem;">Você solicitou a correção dos dados abaixo. Confime a correção para
+						efetuar a mudança por definitivo.</p>
+					<ul style="font-size: 1.2rem">
+						<li id="inome">Nome</li>
+						<li id="icpf">CPF</li>
+						<li id="irg">RG</li>
+						<li id="inascimento">Data de Nascimento</li>
+						<li id="iemail">Email</li>
+						<li id="itelefone">Telefone Celular</li>
+					</ul>
+					<form action="finalfinal_corrigir.html">
+						<p style="font-size: 1.2rem;"><input type="checkbox"> Confirmo a correção dos meus dados.</p>
+						<input type="submit" value="Confirmar">
+					</form>
 				</div>
 			</main>
+
+			<script>
+				let searchParams = new URLSearchParams(window.location.search)
+				if (!searchParams.has('nome')) $('#inome').remove();
+				if (!searchParams.has('cpf')) $('#icpf').remove();
+				if (!searchParams.has('rg')) $('#irg').remove();
+				if (!searchParams.has('nascimento')) $('#inascimento').remove();
+				if (!searchParams.has('email')) $('#iemail').remove();
+				if (!searchParams.has('telefone')) $('#itelefone').remove();
+			</script>
 		</div>
 	</div>
 </body>

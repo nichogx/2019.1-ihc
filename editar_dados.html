@@ -120,15 +120,26 @@
 				<div class="container">
 					<h5 style="font-size: 1.7rem;">Modifique os dados que você selecionou</h5>
 					<form action="final_corrigir.html">
-                        <p style="font-size: 1.2rem;">Nome<br> <input type="text" name = "Nome"></p>
-                        <p style="font-size: 1.2rem;">CPF<br><input type="text" name = "Nome"></p>
-                        <p style="font-size: 1.2rem;">Endereço<br><input type="text" name = "Nome"></p>
-                        <p style="font-size: 1.2rem;">Email<br><input type="text" name = "Nome"></p>
-                        <p style="font-size: 1.2rem;">Telefone Celular<br><input type="text" name = "Nome"></p><br>                        
+                        <p id="inome" style="font-size: 1.2rem;">Nome<br> <input type="text" name = "nome"></p>
+						<p id="icpf" style="font-size: 1.2rem;">CPF<br><input type="text" name = "cpf"></p>
+						<p id="irg" style="font-size: 1.2rem;">RG<br><input type="text" name = "rg"></p>
+                        <p id="inascimento" style="font-size: 1.2rem;">Data de Nascimento<br><input type="text" name = "nascimento"></p>
+                        <p id="iemail" style="font-size: 1.2rem;">Email<br><input type="text" name = "email"></p>
+                        <p id="itelefone" style="font-size: 1.2rem;">Telefone Celular<br><input type="text" name = "telefone"></p><br>
                         <input type="submit" value="Prosseguir">
                     </form>
 				</div>
 			</main>
+
+			<script>
+				let searchParams = new URLSearchParams(window.location.search)
+				if (!searchParams.has('nome')) $('#inome').remove();
+				if (!searchParams.has('cpf')) $('#icpf').remove();
+				if (!searchParams.has('rg')) $('#irg').remove();
+				if (!searchParams.has('nascimento')) $('#inascimento').remove();
+				if (!searchParams.has('email')) $('#iemail').remove();
+				if (!searchParams.has('telefone')) $('#itelefone').remove();
+			</script>
 		</div>
 	</div>
 </body>
