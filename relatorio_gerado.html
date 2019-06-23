@@ -115,18 +115,22 @@
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="padding-top: 5rem">
 				<div
 					class="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Receber meus dados em formato de leitura automática</h1>
+					<h1 class="h2">Gerar relatório dos meus dados</h1>
 				</div>
 				<div class="container">
-					<p style="font-size: 1.2rem;">Você requeriu o envio dos dados em formato de leitura automática, que serão
-						enviados via download. Por favor confirme a sua solicitação abaixo para liberar o download do arquivo.</p>
-						<form action="final_leituraautomatica.html">
-							<p style ="font-size: 1.2rem;"><input type="checkbox"> Confirmo a solicitação de envio dos meus dados
-							em formato de leitura automática via download.</p>
-							<input class="btn btn-sm btn-primary" type="submit" value="Confirmar">
-						</form>
+					<h5 style="font-size: 1.7rem;">Obrigado!</h5>
+					<p style="font-size: 1.2rem;">Um relatório com os dados que você escolheu será gerado e enviado para
+						você pelo e-mail que temos cadastrado em até 1 hora.</p>
+
+					<a class="btn btn-sm btn-primary" href="index.html">Voltar à página de início</a>
 				</div>
 			</main>
 		</div>
 	</div>
+
+	<script>
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})
+	</script>
 </body>
