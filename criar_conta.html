@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>IHC 2019</title>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" style="font-size:2rem; font-weight: bolder;" href="#"><i
+				class="fa fa-plane"></i> VOAR</a>
+		<input class="form-control form-control-dark w-100" type="text" placeholder="Buscar Passagens"
+			aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="criar_conta.html">Criar Conta / Fazer Login</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+				<div class="sidebar-sticky">
+					<div class="row">
+
+					</div>
+
+					<hr>
+
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="index.html">
+								Página Inicial
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								Buscar passagens
+							</a>
+						</li>
+					</ul>
+
+					<h6
+						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>ajuda</span>
+						<a class="d-flex align-items-center text-muted" href="#">
+							<span data-feather="plus-circle"></span>
+						</a>
+					</h6>
+
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								Fale conosco
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="faq.html">
+								FAQ
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="padding-top: 5rem">
+				<div
+					class="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Criar uma Conta</h1>
+				</div>
+				<div class="container">
+					<p style="font-size: 1.2rem;">Já tem uma conta? <a href="">Clique aqui</a> para acessá-la.</p>
+
+					<form action="index.html">
+
+						<input type="text" id="defaultRegisterFormFirstName" class="form-control"
+							placeholder="Nome"><br>
+
+						<input type="text" id="defaultRegisterFormLastName" class="form-control"
+							placeholder="Sobrenome">
+
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Precisamos do
+							seu nome para saber quem você é, colocar seu nome nas passagens e para nos referirmos a
+							você.</small>
+
+						<input type="text" id="defaultRegisterFormCPF" class="form-control" placeholder="CPF">
+
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Precisamos do
+							seu CPF para colocar nas passagens. Sem ele, as ANAC não permite a compra de
+							passagens.</small>
+
+						<input type="email" id="defaultRegisterFormEmail" class="form-control" placeholder="E-mail">
+
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Precisamos do
+							seu e-mail para que você possa fazer login e para nos comunicarmos com você. Prometemos não
+							mandar spam :)</small>
+
+						<input type="password" id="defaultRegisterFormPassword" class="form-control"
+							placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Deve ter pelo
+							menos 8 caracteres</small>
+
+						<input type="text" id="defaultRegisterPhonePassword" class="form-control"
+							placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Opcional - para
+							nos comunicarmos emergencialmente com você.</small>
+
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="termsconditions" required>
+							<label class="custom-control-label" for="termsconditions">Eu li e aceito os <a href=""
+									target="_blank">termos e condições</a></label>
+						</div>
+
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="privacypolicy" required>
+							<label class="custom-control-label" for="privacypolicy">Eu li e aceito a <a href=""
+									target="_blank">política de privacidade</a></label>
+						</div>
+
+						<button class="btn btn-info my-4 btn-block" type="submit">Criar Conta</button>
+
+						<div class="text-center">
+							<hr>
+
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maiores ut iusto,
+								possimus vitae corporis vel molestias a excepturi ducimus! Excepturi beatae pariatur
+								quod eos! Totam beatae modi natus eaque!
+							</p>
+						</div>
+					</form>
+
+				</div>
+			</main>
+		</div>
+	</div>
+</body>

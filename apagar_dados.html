@@ -24,7 +24,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
 
 	<link rel="stylesheet" href="./style.css">
-	
+
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 			aria-label="Search">
 		<ul class="navbar-nav px-3">
 			<li class="nav-item text-nowrap">
-				<a class="nav-link" href="#">Fazer Logout</a>
+				<a class="nav-link" href="primeiro_acesso.html?cookie_accepted=true">Fazer Logout</a>
 			</li>
 		</ul>
 	</nav>
@@ -120,8 +120,8 @@
 				</div>
 				<div class="container">
 					<h5 style="font-size: 1.7rem;">Selecione os dados que você deseja apagar</h5>
-					<p style="font-size: 1.2rem;">Dados marcados com (*) são necessários para o funcionamento do sistema.</p>
-					
+					<p style="font-size: 1.2rem;">Dados marcados com (*) são necessários para o funcionamento do sistema. Caso você deseje apagá-los, sua será apagada.</p>
+
 					<form action="final_apagardados.html" method="GET" id ="formulario">
 							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="nome" class="checkbox"> Nome*</p></input></p>
 							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="cpf" class="checkbox"> CPF*</p></input></p>
@@ -136,9 +136,9 @@
 		</div>
 	</div>
 	<script>
-		function enviar() {	
+		function enviar() {
 			var formulario = document.getElementById('formulario');
-			formulario.action = "final_apagarconta.html";		
+			formulario.action = "final_apagarconta.html";
 		}
 	</script>
 </body>
