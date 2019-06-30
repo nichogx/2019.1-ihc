@@ -24,6 +24,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
 
 	<link rel="stylesheet" href="./style.css">
+	
 </head>
 
 <body>
@@ -115,18 +116,29 @@
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="padding-top: 5rem">
 				<div
 					class="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Apagar ou limitar o tratamento dos meus dados</h1>
+					<h1 class="h2">Apagar dados</h1>
 				</div>
 				<div class="container">
-					<h5 style="font-size: 1.2rem;"><a href="limitar_dados.html">Limitar o tratamento dos meus dados</a></h5>
-                    <p style="font-size: 1.2rem;">Solicitar a limitação do tratamento 
-                        de dados específicos. Requer uma justificativa, que será análisada pela nossa
-                        equipe.</p>
-
-                    <h5 style="font-size: 1.2rem;"><a href="apagar_dados.html">Apagar meus dados</a></h5>
-                    <p style="font-size: 1.2rem;">Apagar todos os dados existentes em nosso sistema.</p>
+					<h5 style="font-size: 1.7rem;">Selecione os dados que você deseja apagar</h5>
+					<p style="font-size: 1.2rem;">Dados marcados com (*) são necessários para o funcionamento do sistema.</p>
+					
+					<form action="final_apagardados.html" method="GET" id ="formulario">
+							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="nome" class="checkbox"> Nome*</p></input></p>
+							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="cpf" class="checkbox"> CPF*</p></input></p>
+							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="rg" class="checkbox"> RG*</p></input></p>
+							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="nascimento" class="checkbox"> Data de Nascimento*</p></input></p>
+							<p style="font-size: 1.2rem;" onclick="enviar()"><input type="checkbox" name="email" class="checkbox"> Email*</p></input></p>
+							<p style="font-size: 1.2rem;" ><input type="checkbox" name="tel" class="checkbox"> Telefone Celular</p></input></p>
+							<input type="submit" value = "Prosseguir" onclick="validCheckboxes()"></input>
+					</form>
 				</div>
 			</main>
 		</div>
 	</div>
+	<script>
+		function enviar() {	
+			var formulario = document.getElementById('formulario');
+			formulario.action = "final_apagarconta.html";		
+		}
+	</script>
 </body>
