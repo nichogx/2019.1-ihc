@@ -122,20 +122,40 @@
                         nossos sistemas ficarão indisponíveis por causa disso. Caso tenha alguma dúvida, leia nossa
                         <a href="#">Política de Privacidade</a> para mais informações, ou peça ajuda no nosso
                         <a href="#">suporte online</a>.</p>
+						
+						<div class="container">
+					<h5 style="font-size: 1.2rem;"><b>Tratamentos do uso de dados limitados:</b></h5><br>
+					
+						<p id="iemail_1" style="font-size: 1.2rem;"> Não repassar meu email para terceiros</p>
+						<p id="iemail_2" style="font-size: 1.2rem;"> Não utilizar meu email para divulgação</p>
+						<p id="iendereco_1" style="font-size: 1.2rem;"> Não repassar meu endereço para terceiros </p>
+						<p id="iendereco_2" style="font-size: 1.2rem;"> Não utilizar meu endereço para comunicação</p>
+                        <p id="itelefone_1" style="font-size: 1.2rem;"> Não repassar meu número de telefone para terceiros </p>
+						<p id="itelefone_1" style="font-size: 1.2rem;"> Não utilizar meu telefone de contato para divulgação</p>
+
+				</div>
 
 
                        <p style="font-size: 1.2rem;"><b>Confirme</b> a sua decisão de limitar o tramento dos seguintes dados:</p>
 
-                       <p style="font-size: 1.2rem;">Telefone Residencial</br>Endereço</p>
 
 
                        <form action="finalfinal_limitar.html">
                             <p style="font-size: 1rem;"> <input type="checkbox"> Eu concordo em limitar o tratamento dos dados acima e estou ciente de que
                             isso me impossibilitará de usar certas funcionalidades do sistema.</p></input>
-                            <input type="submit" value="Confirmar">
+                            <input class="btn btn-sm btn-primary" type="submit" value="Prosseguir">
                       </form>
 				</div>
 			</main>
+			<script>
+				let searchParams = new URLSearchParams(window.location.search)
+				if (!searchParams.has('email_1')) $('#iemail_1').remove();
+				if (!searchParams.has('email_2')) $('#iemaail_2').remove();
+				if (!searchParams.has('endereco_1')) $('#iendereco_1').remove();
+				if (!searchParams.has('endereco_2')) $('#iendereco_2').remove();
+				if (!searchParams.has('telefone_1')) $('#itelefone_1').remove();
+				if (!searchParams.has('telefone_2')) $('#itelefone_2').remove();
+			</script>
 		</div>
 	</div>
 </body>

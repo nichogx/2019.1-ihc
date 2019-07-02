@@ -116,6 +116,7 @@
 				<div
 					class="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Corrigir meus dados</h1>
+					
 				</div>
 				<div class="container">
 					<h5 style="font-size: 1.7rem;">Selecione os dados que você deseja corrigir</h5>
@@ -133,6 +134,18 @@
 					</form>
 				</div>
 			</main>
+			<script>
+				let searchParams = new URLSearchParams(window.location.search)
+				if (!searchParams.has('nome')) $('#inome').remove();
+				if (!searchParams.has('cpf')) $('#icpf').remove();
+				if (!searchParams.has('rg')) $('#irg').remove();
+				if (!searchParams.has('nascimento')) $('#inascimento').remove();
+				if (!searchParams.has('email')) $('#iemail').remove();
+				if (!searchParams.has('telefone')) $('#itelefone').remove();
+				$(function () {
+					$('[data-toggle="popover"]').popover()
+						})
+			</script>
 		</div>
 	</div>
 </body>
