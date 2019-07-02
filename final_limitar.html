@@ -116,6 +116,7 @@
 				<div
 					class="container d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Limitar o tratamento de dados</h1>
+					<a class="btn btn-sm btn-danger" href="dados.html">Voltar para gestão de dados</a>
 				</div>
 				<div class="container">
 					<p style="font-size: 1.2rem;">Você escolheu por limitar o tratamento destes dados. Alguns recursos
@@ -124,9 +125,9 @@
 						<a href="#">Política de Privacidade</a> para mais informações, ou peça ajuda no nosso
 						<a href="#">suporte online</a>.</p>
 
-					<h5 style="font-size: 1.2rem;"><b>Tratamentos do uso de dados limitados:</b></h5><br>
+					<h5 style="font-size: 1.2rem;"><b>As seguintes limitações serão efetivadas:</b></h5><br>
 					<div class="container">
-
+					
 						<p id="iemail_1" style="font-size: 1.2rem;"> Não repassar meu email para terceiros</p>
 						<p id="iemail_2" style="font-size: 1.2rem;"> Não utilizar meu email para divulgação</p>
 						<p id="iendereco_1" style="font-size: 1.2rem;"> Não repassar meu endereço para terceiros </p>
@@ -142,16 +143,40 @@
 					</div>
 
 
-					<p style="font-size: 1.2rem;"><b>Confirme</b> a sua decisão de limitar o tramento dos seguintes
-						dados:</p>
+					<p style="font-size: 1.2rem;"><b>Confirme</b> a sua decisão de limitar o tramento dos dados acima.</p>
 
 
 
 					<form action="finalfinal_limitar.html">
-						<p style="font-size: 1rem;"> <input type="checkbox"> Eu concordo em limitar o tratamento dos
-							dados acima e estou ciente de que
-							isso me impossibilitará de usar certas funcionalidades do sistema.</p></input>
-						<input class="btn btn-sm btn-primary" type="submit" value="Prosseguir">
+							<a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+									Confirmar
+							</a>
+
+							<!-- Modal -->
+						<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Limitar o Tratamento dos seus Dados</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									Tem certeza que deseja limitar o tratamendo dos dados selecionados? 
+								</div>
+								<div class="modal-footer">
+									<a class="btn btn-sm btn-primary"
+										data-dismiss="modal">Não, quero rever minhas escolhas</a>
+										<input type="submit" class="btn btn-sm btn-danger" value="Sim, limitar o tratamento dos meus dados"
+										onclick="validCheckboxes()"></input>
+								</div>
+							</div>
+						</div>
+					</div>
+
+						
 					</form>
 				</div>
 			</main>
