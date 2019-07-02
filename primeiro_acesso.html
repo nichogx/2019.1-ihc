@@ -34,7 +34,7 @@
 			aria-label="Search">
 		<ul class="navbar-nav px-3">
 			<li class="nav-item text-nowrap">
-				<a class="nav-link" href="primeiro_acesso.html?cookie_accepted=true">Fazer Logout</a>
+				<a class="nav-link" href="criar_conta.html">Criar Conta / Fazer Login</a>
 			</li>
 		</ul>
 	</nav>
@@ -44,13 +44,7 @@
 			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
 				<div class="sidebar-sticky">
 					<div class="row">
-						<div class="col-md-5" style="padding-left: 2rem">
-							<img class="card-img-top" style="border: 3px solid #555555;" src="./images/img_usuario.jpg"
-								alt="Card image cap">
-						</div>
-						<div class="col-md-7" style="font-size: 1.5rem">
-							Olá, <br> <b>Pedro C.</b>
-						</div>
+
 					</div>
 
 					<hr>
@@ -64,27 +58,6 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">
 								Buscar passagens
-							</a>
-						</li>
-					</ul>
-
-					<h6
-						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>meus dados</span>
-						<a class="d-flex align-items-center text-muted" href="#">
-							<span data-feather="plus-circle"></span>
-						</a>
-					</h6>
-
-					<ul class="nav flex-column mb-2">
-						<li class="nav-item">
-							<a class="nav-link" href="dados.html">
-								Gerir meus dados
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								Meus vôos
 							</a>
 						</li>
 					</ul>
@@ -175,7 +148,42 @@
 					</div>
 				</div>
 
+				<!--Modal: modalCookie-->
+				<div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+					aria-hidden="true" data-backdrop="true">
+					<div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+						<!--Content-->
+						<div class="modal-content">
+							<!--Body-->
+							<div class="modal-body">
+								<div class="row d-flex justify-content-center align-items-center">
+
+									<p class="pt-3 pr-2"><b>ATENÇÃO: </b> Nós usamos cookies para melhorar sua
+										experiência no site. Para saber mais sobre o uso de cookies, <a href="">clique
+											aqui</a>. O uso de cookies é necessário para o funcionamento correto do
+										nosso site.</p>
+
+									<a class="btn btn-primary">Saiba mais <i class="fas fa-book ml-1"></i></a>
+									<a class="btn btn-outline-primary" data-dismiss="modal">Eu Aceito o uso de
+										cookies</a>
+								</div>
+							</div>
+						</div>
+						<!--/.Content-->
+					</div>
+				</div>
+				<!--Modal: modalCookie-->
+
 			</main>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(() => {
+			let searchParams = new URLSearchParams(window.location.search);
+			if (!searchParams.has('cookie_accepted')) {
+				$('#modalCookie1').modal('show');
+			}
+		});
+	</script>
 </body>

@@ -34,7 +34,7 @@
 			aria-label="Search">
 		<ul class="navbar-nav px-3">
 			<li class="nav-item text-nowrap">
-				<a class="nav-link" href="#">Fazer Logout</a>
+				<a class="nav-link" href="primeiro_acesso.html?cookie_accepted=true">Fazer Logout</a>
 			</li>
 		</ul>
 	</nav>
@@ -136,7 +136,7 @@
 			</main>
 
 			<script>
-				let searchParams = new URLSearchParams(window.location.search)
+				let searchParams = new URLSearchParams(window.location.search);
 				if (!searchParams.has('nome')) $('#inome').remove();
 				if (!searchParams.has('cpf')) $('#icpf').remove();
 				if (!searchParams.has('rg')) $('#irg').remove();
