@@ -121,43 +121,79 @@
 				</div>
 				<div class="container">
 					<h5 style="font-size: 1.7rem;">Selecione os dados que você deseja apagar</h5>
-					<p style="font-size: 1.2rem;">Dados marcados com (*) são necessários para o funcionamento do sistema. Caso você deseje apagá-los, sua será apagada.</p>
+					<p style="font-size: 1.2rem;">Dados marcados com (*) são necessários para o funcionamento do
+						sistema. Caso você deseje apagá-los, sua será apagada.</p>
 
-					<form action="final_apagardados.html" method="GET" id ="formulario">
-							
-							<p style="font-size: 1.2rem;">
+					<form action="final_apagardados.html" method="GET" id="formulario">
+
+						<p style="font-size: 1.2rem;">
 							<input type="checkbox" name="nome" class="checkbox" onclick="enviar()"> Nome*</input>
 							<a data-toggle="popover" title="Nome"
 								data-content="O nome é necessário para sua identificação"><i
 									class="fas fa-question-circle"></i></a></p>
-							<p style="font-size: 1.2rem;">
+						<p style="font-size: 1.2rem;">
 							<input type="checkbox" name="cpf" class="checkbox" onclick="enviar()"> CPF*</input>
 							<a data-toggle="popover" title="CPF"
 								data-content="O CPF é necessário para sua identificação "><i
 									class="fas fa-question-circle"></i></a></p>
-							<p style="font-size: 1.2rem;">
+						<p style="font-size: 1.2rem;">
 							<input type="checkbox" name="rg" class="checkbox" onclick="enviar()"> RG*</input>
 							<a data-toggle="popover" title="RG"
 								data-content="O RG é necessário para sua identificação"><i
 									class="fas fa-question-circle"></i></a></p>
-							<p style="font-size: 1.2rem;">
-							<input type="checkbox" name="datadenascimento" class="checkbox" onclick="enviar()"> Data de Nascimento*</input>
+						<p style="font-size: 1.2rem;">
+							<input type="checkbox" name="datadenascimento" class="checkbox" onclick="enviar()"> Data de
+							Nascimento*</input>
 							<a data-toggle="popover" title="Data de Nascimento"
 								data-content="A data de nascimento em conjunto com os campos anteriores é necessária para validar a pessoa"><i
 									class="fas fa-question-circle"></i></a></p>
-							<p style="font-size: 1.2rem;">
+						<p style="font-size: 1.2rem;">
 							<input type="checkbox" name="email" class="checkbox" onclick="enviar()"> Email*</input>
 							<a data-toggle="popover" title="Email"
 								data-content="Necessário porque temos que possuir uma forma de contato com você"><i
 									class="fas fa-question-circle"></i></a></p>
-							<p style="font-size: 1.2rem;">
-							<input type="checkbox" name="telefone" class="checkbox" onclick="enviar()"> Telefone celular</input>
-							<a data-toggle="popover" title="Telefone"
-								data-content="Forma de contato complementar"><i
+						<p style="font-size: 1.2rem;">
+							<input type="checkbox" name="telefone" class="checkbox" onclick=""> Telefone
+							celular</input>
+							<a data-toggle="popover" title="Telefone" data-content="Forma de contato complementar"><i
 									class="fas fa-question-circle"></i></a></p>
-							<input type="submit" value = "Prosseguir" onclick="validCheckboxes()"></input>
+						<p style="font-size: 1.2rem;">
+							<input type="checkbox" name="hist" class="checkbox" onclick=""> Histórico de Compras, dados
+							estatísticos e recomendações</input>
+							<a data-toggle="popover" title="Histórico de Compras, dados estatísticos e recomendações"
+								data-content="Todas as suas compras utilizando o nosso sistema, dados estatísticos e recomendações geradas por esse histórico."><i
+									class="fas fa-question-circle"></i></a></p>
+
+									<a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+											Prosseguir
+									</a>
+
+						<!-- Modal -->
+						<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog"
+							aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">Apagar dados</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										Tem certeza que deseja apagar os dados selecionados? Essa ação não pode ser
+										desfeita.
+									</div>
+									<div class="modal-footer">
+										<a class="btn btn-sm btn-primary"
+											data-dismiss="modal">Não, quero rever minhas escolhas</a>
+											<input type="submit" class="btn btn-sm btn-danger" value="Sim, apagar meus dados"
+											onclick="validCheckboxes()"></input>
+									</div>
+								</div>
+							</div>
+						</div>
 					</form>
-					
+
 				</div>
 			</main>
 		</div>

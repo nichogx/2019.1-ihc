@@ -120,28 +120,45 @@
 					<a class="btn btn-sm btn-danger" href="dados.html">Voltar para gestão de dados</a>
 				</div>
 				<div class="container">
-						<h5 style="font-size: 1.7rem;">Selecione os tipos de dados que você gostaria de incluir no relatório
-							</h5>
-							<p style="font-size: 1.2rem;">Dados básicos como nome, documentos de identificação e email serão
-								sempre incluídos nos relatórios gerados.</p>
-							<form action="relatorio_gerado.html" method="GET">
-								<p style="font-size: 1.2rem;"><input type="checkbox" name="dbas" disabled checked> Dados básicos
-									</input></p>
-								<p style="font-size: 1.2rem;"><input type="checkbox" name="hist"> Histórico de Compras
-									</input><a data-toggle="popover" title="Histórico de Compras"
-										data-content="Inclui uma lista de todas as suas compras utilizando o nosso sistema."><i
+					<h5 style="font-size: 1.7rem;">Selecione os tipos de dados que você gostaria de incluir no relatório
+					</h5>
+					<p style="font-size: 1.2rem;">Aqui você pode receber os seus dados. Você pode gerar um relatório com
+						tudo o que
+						sabemos sobre você, para sua própria consulta, ou requerir o envio de todos os seus dados em
+						formato de leitura automática, para portar seus dados para outro site.</p>
+					<p style="font-size: 1.2rem;">Dados básicos como nome, documentos de identificação e email serão
+						sempre incluídos nos relatórios gerados.</p>
+					<form action="relatorio_gerado.html" method="GET">
+						<label style="font-size: 1.2rem;" for="tipo">Formato do Relatório</label>
+						<a style="font-size: 1.2rem;" data-toggle="popover" title="Formato do relatório"
+							data-content="Escolha PDF para receber um relatório de fácil entendimento. Selecione leitura automática se for portar seus dados para outro site (csv)."><i
+								class="fas fa-question-circle"></i></a>
+						<select name="tipo" class="custom-select col-md-2" id="">
+							<option value="pdf">PDF</option>
+							<option value="la">Leitura Automática</option>
+						</select><br><br>
+						<p style="font-size: 1.2rem;"><input type="checkbox" name="dbas" disabled checked> Dados básicos
+							</input></p>
+						<p style="font-size: 1.2rem;"><input type="checkbox" name="hist"> Histórico de Compras
+							</input><a data-toggle="popover" title="Histórico de Compras"
+								data-content="Inclui uma lista de todas as suas compras utilizando o nosso sistema."><i
 									class="fas fa-question-circle"></i></a></p>
-									<p style="font-size: 1.2rem;"><input type="checkbox" name="dadosest"> Dados Estatísticos Gerados
-									</input><a data-toggle="popover" title="Dados Estatísticos Gerados" data-content="Inclui companhias aéreas e destinos
+						<p style="font-size: 1.2rem;"><input type="checkbox" name="dadosest"> Dados Estatísticos Gerados
+							</input><a data-toggle="popover" title="Dados Estatísticos Gerados" data-content="Inclui companhias aéreas e destinos
 									frequentemente pesquisados e viajados, distância e tempo totais viajados,
 									número de destinos por continente/país e área, entre outros dados estatísticos gerados por nós
 									para melhorar suas recomendações e sua experiência no site."><i class="fas fa-question-circle"></i></a></p>
-								<p style="font-size: 1.2rem;"><input type="checkbox" name="cons"> Consentimento
-									</input><a data-toggle="popover" title="Consentimento" data-content="Data, hora e forma que você deu seu consentimento para usarmos cada tipo de dado seu,
-									consentimento para utilização de cookies para melhorar a sua experiência e todas as limitações para tratamento dos seus dados que você nos informou."><i class="fas fa-question-circle"></i></a></p>
-								</p>
+						<p style="font-size: 1.2rem;"><input type="checkbox" name="dadosest"> Recomendações Geradas
+							</input><a data-toggle="popover" title="Recomendações Geradas" data-content="Inclui todas as recomendações geradas automaticamente pelo nosso
+							algorítmo, e o motivo de por que cada um é recomendado."><i class="fas fa-question-circle"></i></a></p>
+						<p style="font-size: 1.2rem;"><input type="checkbox" name="cons"> Consentimento
+							</input><a data-toggle="popover" title="Consentimento"
+								data-content="Data, hora e forma que você deu seu consentimento para usarmos cada tipo de dado seu,
+									consentimento para utilização de cookies para melhorar a sua experiência e todas as limitações para tratamento dos seus dados que você nos informou."><i
+									class="fas fa-question-circle"></i></a></p>
+						</p>
 
-								<input type="submit" class="btn btn-sm btn-primary" value="Prosseguir"></input>
+						<input type="submit" class="btn btn-sm btn-primary" value="Solicitar"></input>
 					</form>
 
 				</div>
