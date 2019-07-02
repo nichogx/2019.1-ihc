@@ -124,7 +124,7 @@
 							menos 8 caracteres</small>
 
 						<input type="text" id="defaultRegisterPhonePassword" class="form-control"
-							placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+							placeholder="Número de Telefone" aria-describedby="defaultRegisterFormPhoneHelpBlock">
 
 						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">Opcional - para
 							nos comunicarmos emergencialmente com você.</small>
@@ -132,13 +132,13 @@
 						<div class="custom-control custom-checkbox">
 							<input type="checkbox" class="custom-control-input" id="termsconditions" required>
 							<label class="custom-control-label" for="termsconditions">Eu li e aceito os <a href=""
-									target="_blank">termos e condições</a></label>
+									data-toggle="modal" data-target="#modaltermos">termos e condições</a></label>
 						</div>
 
 						<div class="custom-control custom-checkbox">
 							<input type="checkbox" class="custom-control-input" id="privacypolicy" required>
 							<label class="custom-control-label" for="privacypolicy">Eu li e aceito a <a href=""
-									target="_blank">política de privacidade</a></label>
+									data-toggle="modal" data-target="#modalpolitica">política de privacidade</a></label>
 						</div>
 
 						<button class="btn btn-info my-4 btn-block" type="submit">Criar Conta</button>
@@ -155,6 +155,77 @@
 
 				</div>
 			</main>
+
+			<!-- Modal -->
+			<div class="modal fade" id="modaltermos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Termos e Condições</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit iste ullam, odit ab,
+							consequuntur explicabo, illum vitae ipsum ipsam minima non in mollitia voluptatum facere
+							laborum distinctio temporibus? Blanditiis, ullam.
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="modalpolitica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Política de Privacidade</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<b>Este é um resumo. Para visualizar a política de privacidade completa, <a href="">clique
+									aqui</a>.</b>
+							<br><br>
+
+							<h6>Como Guardamos seus Dados</h6>
+							<p>Seus dados são guardados com os mais modernos métodos de criptografia, para que estejam
+								extremamente seguros. Sua senha é guardada utilizando um moderno método de hashing
+								chamado <a href="">bcrypt</a>. Isso significa que não podemos ver sua senha nos nossos
+								servidores, mesmo se quiséssemos!</p>
+							<p>Para saber mais sobre os nossos métodos, <a href="">clique aqui</a>.</p>
+
+							<h6>Que dados precisamos e por que precisamos deles</h6>
+							<p>Precisamos do seu nome e sobrenome para que possamos nos referir à você e comprarmos
+								passagens no seu nome.
+								Seu CPF é necessário por lei para comprar uma passagem.
+								Seu e-mail é utilizado para que possamos nos comunicar com você, e para você fazer
+								login.
+								Seu número de telefone é opcional e usado para nos comunicarmos com você em casos
+								emergenciais.
+							</p>
+
+							<h6>O que coletamos de informação sobre você</h6>
+							<p>Coletamos o seu histórico de pesquisas e de compras/vôos, além de dados estatísticos como
+								quais companhias e destinos são mais frequentes para você.</p>
+
+							<h6>Para utilizar o site</h6>
+							<p>Para utilizar o nosso serviço é necessário aceitar o que foi descrito acima; você aceita
+								em nos fornecer as informações necessárias, verdadeiras, e aceita que seus dados sejam
+								tratados como foi descrito.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
